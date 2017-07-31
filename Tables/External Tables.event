@@ -5,3 +5,37 @@ defWeaponDebuffs(0,2,0,0,0,3,3) //0x2: Iron Shuriken debuff.
 defWeaponDebuffs(3,0,0,0,0,4,4) //0x3: Steel Shuriken debuff.
 defWeaponDebuffs(0,0,0,4,0,4,4) //0x4: Silver Shuriken debuff.
 defWeaponDebuffs(4,0,0,4,0,4,4) //0x5: Pebble debuff.
+
+ALIGN 4
+#define defWTAAdvantage(attackingType, defendingType) "BYTE attackingType defendingType"//"BYTE attackingType defendingType 0x0F 0x01"
+#define defWTADisadvantage(attackingType, defendingType) "BYTE defendingType attackingType" //"BYTE attackingType defendingType 0xF1 0xFF"
+#define endWTATable "BYTE 0xFF 0xFF"
+#define Swords 0x0
+#define Lances 0x1
+#define Axes 0x2
+#define Bows 0x3
+#define Staves 0x4
+#define Tomes 0x5
+#define Shurikens 0x6
+#define Stones 0x7
+#define ItemType 0x9
+WTATable:
+defWTAAdvantage(Swords, Axes)
+defWTAAdvantage(Swords, Bows)
+
+defWTAAdvantage(Lances, Swords)
+defWTAAdvantage(Lances, Tomes)
+
+defWTAAdvantage(Axes, Lances)
+defWTAAdvantage(Axes, Shurikens)
+
+defWTAAdvantage(Tomes, Axes)
+defWTAAdvantage(Tomes, Bows)
+
+defWTAAdvantage(Shurikens, Swords)
+defWTAAdvantage(Shurikens, Tomes)
+
+defWTAAdvantage(Bows, Lances)
+defWTAAdvantage(Bows, Shurikens)
+
+endWTATable

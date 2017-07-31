@@ -87,6 +87,15 @@ POP
   //Dragon Veins
   #include "DragonVeins.event"
 
+  //3DS Battle
+  #include "3DSBattle.event"
+  
+  //Fates EXP Approximation
+  #include "FatesEXP.event"
+  
+  //Fates RNG
+  #include "FatesRNG.event"
+  
   //Modular Stat Screen
   #include "ModularStatScreen.event"
 
