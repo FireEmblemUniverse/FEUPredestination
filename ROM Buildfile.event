@@ -1,7 +1,7 @@
 #ifdef _FE8_
     #include "EAstdlib.event"
     #include "Custom Definitions.event"
-        // #define __DEBUG__ //allow seizes at start of chapters
+        #define __DEBUG__ //allow seizes at start of chapters
 
     ORG FreeSpace
     //Text first for Text ID definitions
@@ -10,18 +10,6 @@
 
     //CSV tables
     #include "Tables/Table Installer.event"
-    MasterSealClasses:
-    BYTE $0F $10 $13 $14 $3F $42 $41 $05 $06 $09 $0A $19 $1A $48 $1F $20 $45 $4A $25 $26 $2D $2E $4B $0D $3D $3E $47 $7E $7F $37 $44 Soldier 0
-    ALIGN 4
-    KnightCrestClasses:
-    BYTE $05 $06 $09 $0A $37 Soldier 00
-    ALIGN 4
-    SuperBlitzEffectiveness:
-    BYTE $52 $53 $54 $55 $56 $57 $58 $59 $5A $5B $5C $5D $5E $5F $60 $61 $62 $63 $64 $65 $66 $3B $7C $7D $51 Necromancer 00
-    ALIGN 4
-    SuperBlitzStatBoosts:
-    //   hp st sk sp df rs lk mv cn
-    BYTE 00 10 10 00 10 20 00 00 00 00
     ALIGN 4
 
     PUSH
@@ -54,7 +42,7 @@
     POP
 
     NewPrepScreenShopList:
-    SHLI $01 $14 $1F $2D $38 $45 $3F $4B AngelicRobe EnergyRing SecretBook Speedwings GoddessIcon Dragonshield Talisman
+    SHLI $01 $14 $1F $2D $38 $45 $3F $4B // AngelicRobe EnergyRing SecretBook Speedwings GoddessIcon Dragonshield Talisman
     MESSAGE Used table space ends at currentOffset
 
     //Engine Hacks
@@ -76,7 +64,7 @@
     #include "Maps/Master Map Installer.event"
 
     //Palettes
-    #include "Blitz Palettes/Palette Setup.event"   
+    #include "Predestination Palettes/Palette Setup.event"   
     
     MESSAGE Used free space ends at currentOffset
 #else

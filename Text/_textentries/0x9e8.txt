@@ -1,2 +1,0 @@
-[MidLeft][LoadCurrent]
-This text is a placeholder![A][X]
