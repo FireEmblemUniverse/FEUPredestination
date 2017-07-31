@@ -57,3 +57,20 @@ NewStatScreenPal:
 
 RemoveGlowy:
 #incext Png2Dmp "RemoveGlowy.png" --lz77
+
+#define WeaponIconOffset(iconID) "0x5926F4 + 0x80*iconID"
+
+#define DragonstoneIcon     0x43
+#define DragonstonePlusIcon 0x44
+ORG WeaponIconOffset(DragonstoneIcon)
+#incext Png2Dmp "Weapon Icons/Dragonstone.png"
+ORG WeaponIconOffset(DragonstonePlusIcon)
+#incext Png2Dmp "Weapon Icons/Dragonstone+.png"
+
+ORG WeaponIconOffset(0x75)
+#incbin "Tome Icon.dmp"
+ORG WeaponIconOffset(0x76)
+#incbin "Shuriken Icon.dmp"
+ORG WeaponIconOffset(0x77)
+#incbin "Stone Icon.dmp"
+
