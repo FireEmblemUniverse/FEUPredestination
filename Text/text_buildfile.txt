@@ -28,20 +28,8 @@ Control CPU Units: ON[X]
 ## ControlOFFMessage
 Control CPU Units: OFF[X]
 
-## DV1Desc
-Freeze all enemies[N]
-for one turn[X]
-
-##Name_BlitzLance
-Blitz Lance[X]
-
-##Name_SuperBlitzLance
-Super Blitz[X]
-
 #include "unitnames.txt"
 
 #include "skilldesc_text.txt"
 
 #include "chaptertext.txt"
-#include "ch1.txt"
-#include "ch15_text.txt"
